@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>test</title>
+    <url>/2020/03/15/test/</url>
+    <content><![CDATA[<p>This is a test :)</p>
+<a id="more"></a>
+<p>hidden:</p>
+<ul>
+<li>ref:
+<ul>
+<li><a href="https://allen108108.github.io/blog/2019/10/07/%E4%BD%BF%E7%94%A8%20Github%20page%20%E8%A3%BD%E4%BD%9C%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99%20%E2%80%93%20%E4%BB%A5%20Hexo%20_%20Next%20%E8%A3%BD%E4%BD%9C%E9%83%A8%E8%90%BD%E6%A0%BC/" target="_blank" rel="noopener">template</a></li>
+<li><a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics" target="_blank" rel="noopener">LaTex</a></li>
+<li><a href="https://gist.github.com/christech1117/6dc5221c177104990767d6490ad8c7ba" target="_blank" rel="noopener">MD</a></li>
+</ul></li>
+<li>plot:
+<ul>
+<li><img src="test1.png" /></li>
+</ul></li>
+<li>LaTex</li>
+</ul>
+<p><span class="math display">\[
+\frac{|ax + by + c|}{\sqrt{a^{2}+b^{2}}}
+\]</span> <span class="math display">\[
+|a|&lt;1
+\]</span></p>
+<p><span class="math display">\[\begin{equation}\label{eq1}
+e=mc^2
+\end{equation}\]</span></p>
+<p><span class="math display">\[
+1=\sum_{i=0}^{m}\sum_{k=0}^{W_i-1}b_{i,k}=\sum_{i=0}^{m}b_{i,0}\sum_{k=0}^{W_i-1}\frac{W_i-k}{W_i}=\sum_{i=0}^{m}b_{i,0}\frac{W_i+1}{2}\\
+=\frac{b_{0,0}}{2}\left[W\left(\sum_{i=0}^{m-1}(2p)^i+\frac{(2p)^m}{1-p}\right) + \frac{1}{1-p}\right]
+\]</span></p>
+<p><span class="math display">\[
+\cos (2\theta) = \cos^2 \theta - \sin^2 \theta
+\]</span> <span class="math display">\[
+\forall x \in X, \quad \exists y \leq \epsilon
+\]</span></p>
+]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/03/15/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+</search>
