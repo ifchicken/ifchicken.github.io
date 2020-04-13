@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Memory management</title>
+    <url>/2020/04/13/Memory-management/</url>
+    <content><![CDATA[<h2 id="address-binding">Address binding:</h2>
+<ul>
+<li>compile time addr binding</li>
+<li>load time addr binding</li>
+<li>Execution time addr binding</li>
+</ul>
+]]></content>
+      <categories>
+        <category>OS</category>
+      </categories>
+  </entry>
+  <entry>
     <title>test</title>
     <url>/2020/03/15/test/</url>
     <content><![CDATA[<p>This is a test :)</p>
