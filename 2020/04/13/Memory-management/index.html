@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="Address binding:  compile time addr binding load time addr binding Execution time addr binding">
+<meta name="description" content="Memory Management:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Memory management">
 <meta property="og:url" content="http://ifchicken.github.io/2020/04/13/Memory-management/index.html">
 <meta property="og:site_name" content="ifchicken&#39;s blog">
-<meta property="og:description" content="Address binding:  compile time addr binding load time addr binding Execution time addr binding">
+<meta property="og:description" content="Memory Management:">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-13T19:31:15.000Z">
-<meta property="article:modified_time" content="2020-04-13T19:35:39.158Z">
+<meta property="article:modified_time" content="2020-04-15T03:04:54.166Z">
 <meta property="article:author" content="ifchicken">
 <meta name="twitter:card" content="summary">
 
@@ -390,12 +390,22 @@
       
 
       
-        <h2 id="address-binding">Address binding:</h2>
+        <h2 id="memory-management">Memory Management:</h2>
+<a id="more"></a>
 <ul>
-<li>compile time addr binding</li>
-<li>load time addr binding</li>
-<li>Execution time addr binding</li>
+<li><a href="https://mropengate.blogspot.com/2015/01/operating-system-ch8-memory-management.html" target="_blank" rel="noopener">ref</a></li>
 </ul>
+<ol type="1">
+<li>Address binding:
+<ul>
+<li>Compile time addr binding: compiler knows the absolute address</li>
+<li>Load time addr binding: relative addr</li>
+<li>Execution time addr binding: move addr</li>
+</ul></li>
+<li>Dynamic loading: programmer decides</li>
+<li>Dynamic linking: load the func into memory when be called</li>
+<li>Overlays: if func1, func2 are exclusive, no need to load them at the same time</li>
+</ol>
 
       
     </div>
@@ -429,6 +439,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/04/14/c-code/" rel="prev" title="C code">
+                C code <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -505,7 +519,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -516,7 +530,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -551,7 +565,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#address-binding"><span class="nav-number">1.</span> <span class="nav-text">Address binding:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#memory-management"><span class="nav-number">1.</span> <span class="nav-text">Memory Management:</span></a></li></ol></div>
             
 
           </div>

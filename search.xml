@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C code</title>
+    <url>/2020/04/14/c-code/</url>
+    <content><![CDATA[<p>C practice</p>
+<a id="more"></a>
+<ul>
+<li><a href="https://leetcode.com/problems/fibonacci-number/" target="_blank" rel="noopener">509 - Fibonacci Number</a> array</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fib</span><span class="params">(<span class="keyword">int</span> N)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = fib(<span class="number">5</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"res is %d\n"</span>, res);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// approach 1</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fib</span><span class="params">(<span class="keyword">int</span> N)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (N &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> N;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> lib[N + <span class="number">1</span>];</span><br><span class="line">    lib[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    lib[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= N; i++) &#123;</span><br><span class="line">        lib[i] = lib[i - <span class="number">1</span>] + lib[i - <span class="number">2</span>];</span><br><span class="line">    &#125;        </span><br><span class="line">    <span class="keyword">return</span> lib[N];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// approach 2</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fib2</span><span class="params">(<span class="keyword">int</span> N)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (N &lt;= <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> N;</span><br><span class="line">    <span class="keyword">return</span> fib(N - <span class="number">1</span>) + fib(N - <span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a href="https://leetcode.com/problems/string-to-integer-atoi/" target="_blank" rel="noopener">8. String to Integer (atoi)</a> math, string</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctype.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">myAtoi</span><span class="params">(<span class="keyword">char</span> * str)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = myAtoi(<span class="string">"   42  "</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"res is %d\n"</span>, res);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">myAtoi</span><span class="params">(<span class="keyword">char</span> * str)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>, sign = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (str[i] == <span class="string">' '</span>) &#123;</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (str[i] == <span class="string">'+'</span>)</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (str[i] == <span class="string">'-'</span>) &#123;</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">        sign = <span class="number">-1</span>;        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">long</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">isdigit</span>(str[i])) &#123;</span><br><span class="line">        res = res * <span class="number">10</span> + str[i] - <span class="string">'0'</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (sign * res &gt;= <span class="built_in">pow</span>(<span class="number">2</span>, <span class="number">31</span>) - <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">pow</span>(<span class="number">2</span>, <span class="number">31</span>) - <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sign * res &lt;= <span class="built_in">pow</span>(<span class="number">2</span>,<span class="number">31</span>) * (<span class="number">-1</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">pow</span>(<span class="number">2</span>, <span class="number">31</span>) * (<span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">int</span>)res * sign;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>LC</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Memory management</title>
     <url>/2020/04/13/Memory-management/</url>
-    <content><![CDATA[<h2 id="address-binding">Address binding:</h2>
+    <content><![CDATA[<h2 id="memory-management">Memory Management:</h2>
+<a id="more"></a>
 <ul>
-<li>compile time addr binding</li>
-<li>load time addr binding</li>
-<li>Execution time addr binding</li>
+<li><a href="https://mropengate.blogspot.com/2015/01/operating-system-ch8-memory-management.html" target="_blank" rel="noopener">ref</a></li>
 </ul>
+<ol type="1">
+<li>Address binding:
+<ul>
+<li>Compile time addr binding: compiler knows the absolute address</li>
+<li>Load time addr binding: relative addr</li>
+<li>Execution time addr binding: move addr</li>
+</ul></li>
+<li>Dynamic loading: programmer decides</li>
+<li>Dynamic linking: load the func into memory when be called</li>
+<li>Overlays: if func1, func2 are exclusive, no need to load them at the same time</li>
+</ol>
 ]]></content>
       <categories>
         <category>OS</category>
@@ -67,7 +95,7 @@ e=mc^2
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
 <h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
 <h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
