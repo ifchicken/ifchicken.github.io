@@ -1,6 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Process</title>
+    <url>/2020/04/21/Process/</url>
+    <content><![CDATA[<h1 id="includes">Includes:</h1>
+<ul>
+<li><a href="#os">OS</a></li>
+<li><a href="#kernel">Kernel</a></li>
+<li><a href="#process">Process:</a></li>
+<li><a href="#pcb-and-context-switch">PCB and context switch</a></li>
+<li><a href="#scheduler">Scheduler</a></li>
+<li><a href="#ipc">IPC</a></li>
+</ul>
+<a id="more"></a>
+<h1 id="os">OS</h1>
+<ul>
+<li>OS is software to abstract(simplify) and arbitrate(control) HW system</li>
+<li>like toy shop manager - resource management, policy, mitigate</li>
+</ul>
+<figure>
+<img src="OS_element.png" alt="" /><figcaption>OS element: abstraction, mechanism, policy</figcaption>
+</figure>
+<h1 id="kernel">Kernel</h1>
+<figure>
+<img src="kernal_1.png" alt="" /><figcaption>distiguish computer platform as 2 level</figcaption>
+</figure>
+<figure>
+<img src="kernal_2.png" alt="" /><figcaption>application needs OS to support HW access</figcaption>
+</figure>
+<figure>
+<img src="kernel_3.png" alt="" /><figcaption>System flow call ex: user process calls OS then return back to user</figcaption>
+</figure>
+<h1 id="process">Process</h1>
+<ul>
+<li>Process is instance of executing program</li>
+<li>like an order of toys</li>
+</ul>
+<p><img src="process_1.png" /> <img src="process_2.png" alt="process has virtual addr" /></p>
+<figure>
+<img src="process_3.png" alt="" /><figcaption>page table mapps virtual addr to hysical addr</figcaption>
+</figure>
+<figure>
+<img src="process_4.png" alt="" /><figcaption>some physical addr is in the disk</figcaption>
+</figure>
+<h1 id="pcb-and-context-switch">PCB and context switch</h1>
+<ul>
+<li>PCB has state of execution(program counter, stack), tmp holding area (mm), might require some HW (io device)</li>
+<li>process control block (PCB) includes:
+<ol type="1">
+<li>program counter (pc) - current step of the process (binary)</li>
+<li>stack pointer</li>
+</ol></li>
+<li>Context switch: when 2 or more process switch for CPU (ex: p1 switch to p2), it need to record the stopping point for current process(p1) and also upload the stopping point for incoming process(p2)</li>
+</ul>
+<p><img src="pcb_1.png" /> <img src="pcb_2.png" /> <img src="pcb_3.png" /> <img src="pcb_4.png" /></p>
+<h1 id="scheduler">Scheduler</h1>
+<p><img src="scheduler_1.png" /> <img src="scheduler_2.png" alt="the smaller time scheduler takes, higher CPU efficientcy" /></p>
+<figure>
+<img src="IO.png" alt="" /><figcaption>scheduler taks next process from ready queue</figcaption>
+</figure>
+<h1 id="ipc">IPC</h1>
+<ul>
+<li>Inter Process Communication <img src="ipc_1.png" /> <img src="ipc_2.png" /> <img src="ipc_3.png" /></li>
+</ul>
+]]></content>
+      <categories>
+        <category>OS</category>
+      </categories>
+  </entry>
+  <entry>
     <title>C code</title>
     <url>/2020/04/14/c-code/</url>
     <content><![CDATA[<p>C practice</p>
@@ -8,11 +76,14 @@
 <ul>
 <li><a href="https://leetcode.com/problems/fibonacci-number/" target="_blank" rel="noopener">509 - Fibonacci Number</a> array</li>
 </ul>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fib</span><span class="params">(<span class="keyword">int</span> N)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = fib(<span class="number">5</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"res is %d\n"</span>, res);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// approach 1</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fib</span><span class="params">(<span class="keyword">int</span> N)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (N &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> N;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> lib[N + <span class="number">1</span>];</span><br><span class="line">    lib[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    lib[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= N; i++) &#123;</span><br><span class="line">        lib[i] = lib[i - <span class="number">1</span>] + lib[i - <span class="number">2</span>];</span><br><span class="line">    &#125;        </span><br><span class="line">    <span class="keyword">return</span> lib[N];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// approach 2</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fib2</span><span class="params">(<span class="keyword">int</span> N)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (N &lt;= <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> N;</span><br><span class="line">    <span class="keyword">return</span> fib(N - <span class="number">1</span>) + fib(N - <span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fib</span><span class="params">(<span class="keyword">int</span> N)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = fib(<span class="number">5</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"res is %d\n"</span>, res);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// approach 1</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fib</span><span class="params">(<span class="keyword">int</span> N)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (N &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> N;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> lib[N + <span class="number">1</span>];</span><br><span class="line">    lib[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    lib[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= N; i++) &#123;</span><br><span class="line">        lib[i] = lib[i - <span class="number">1</span>] + lib[i - <span class="number">2</span>];</span><br><span class="line">    &#125;        </span><br><span class="line">    <span class="keyword">return</span> lib[N];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// approach 2</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fib2</span><span class="params">(<span class="keyword">int</span> N)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (N &lt;= <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> N;</span><br><span class="line">    <span class="keyword">return</span> fib(N - <span class="number">1</span>) + fib(N - <span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li><a href="https://leetcode.com/problems/string-to-integer-atoi/" target="_blank" rel="noopener">8. String to Integer (atoi)</a> math, string</li>
 </ul>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctype.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">myAtoi</span><span class="params">(<span class="keyword">char</span> * str)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = myAtoi(<span class="string">"   42  "</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"res is %d\n"</span>, res);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">myAtoi</span><span class="params">(<span class="keyword">char</span> * str)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>, sign = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (str[i] == <span class="string">' '</span>) &#123;</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (str[i] == <span class="string">'+'</span>)</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (str[i] == <span class="string">'-'</span>) &#123;</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">        sign = <span class="number">-1</span>;        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">long</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">isdigit</span>(str[i])) &#123;</span><br><span class="line">        res = res * <span class="number">10</span> + str[i] - <span class="string">'0'</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (sign * res &gt;= <span class="built_in">pow</span>(<span class="number">2</span>, <span class="number">31</span>) - <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">pow</span>(<span class="number">2</span>, <span class="number">31</span>) - <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sign * res &lt;= <span class="built_in">pow</span>(<span class="number">2</span>,<span class="number">31</span>) * (<span class="number">-1</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">pow</span>(<span class="number">2</span>, <span class="number">31</span>) * (<span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">int</span>)res * sign;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a href="https://leetcode.com/problems/number-of-1-bits/" target="_blank" rel="noopener">191. Number of 1 Bits</a> bit operation <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">hammingWeight</span><span class="params">(<span class="keyword">uint32_t</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (n &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        res += n &amp; <span class="number">1</span>;</span><br><span class="line">        n = n &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
 ]]></content>
       <categories>
         <category>LC</category>
