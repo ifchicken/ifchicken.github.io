@@ -1,121 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>LC-25 Reverse Nodes in k-Group</title>
-      <link href="/2021/06/05/LC-25-Reverse-Nodes-in-k-Group/"/>
-      <url>/2021/06/05/LC-25-Reverse-Nodes-in-k-Group/</url>
-      
-        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="e96ca93d89a822fac626a71fde68d6b6586737be2e36ecc240ee6efde3ab5243">27c5370ec477f4ada4932eeedba6a8902255f9a2f5ac9881a96a61dedcb795af5167f38d7364b375499328d396ec21a5239cb0b13cd683dc6c9ef03b753ca8547dc2795ccaf147ee60e9d4d70be93d8076dafef0a69364291105542f4d7c01244767bf68bc9d33e6bba8c693a06fbec260dcb8da0fb1e4e0f758c0218f5591d05f9ec475bd7411e8cf59672bbb83bf33d5f0affce615c740a6d61e4329fec593</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 這裡需要密碼.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      
-      
+<search>
+  <entry>
+    <title>LC-25 Reverse Nodes in k-Group</title>
+    <url>/2021/06/05/LC-25-Reverse-Nodes-in-k-Group/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="e96ca93d89a822fac626a71fde68d6b6586737be2e36ecc240ee6efde3ab5243">27c5370ec477f4ada4932eeedba6a8902255f9a2f5ac9881a96a61dedcb795af5167f38d7364b375499328d396ec21a5239cb0b13cd683dc6c9ef03b753ca8547dc2795ccaf147ee60e9d4d70be93d8076dafef0a69364291105542f4d7c01244767bf68bc9d33e6bba8c693a06fbec260dcb8da0fb1e4e0f758c0218f5591d05f9ec475bd7411e8cf59672bbb83bf33d5f0affce615c740a6d61e4329fec593</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 這裡需要密碼.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
-          
-          <category> LC </category>
-          
+        <category>LC</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> secret </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Process</title>
-      <link href="/2020/04/21/Process/"/>
-      <url>/2020/04/21/Process/</url>
-      
-        <content type="html"><![CDATA[<h1 id="includes">Includes:</h1><ul><li><a href="#os">OS</a></li><li><a href="#kernel">Kernel</a></li><li><a href="#process">Process:</a></li><li><a href="#pcb-and-context-switch">PCB and context switch</a></li><li><a href="#scheduler">Scheduler</a></li><li><a href="#ipc">IPC</a></li></ul><a id="more"></a><h1 id="os">OS</h1><ul><li>OS is software to abstract(simplify) and arbitrate(control) HW system</li><li>like toy shop manager - resource management, policy, mitigate</li></ul><figure><img src="OS_element.png" alt="" /><figcaption>OS element: abstraction, mechanism, policy</figcaption></figure><h1 id="kernel">Kernel</h1><figure><img src="kernal_1.png" alt="" /><figcaption>distiguish computer platform as 2 level</figcaption></figure><figure><img src="kernal_2.png" alt="" /><figcaption>application needs OS to support HW access</figcaption></figure><figure><img src="kernel_3.png" alt="" /><figcaption>System flow call ex: user process calls OS then return back to user</figcaption></figure><h1 id="process">Process</h1><ul><li>Process is instance of executing program</li><li>like an order of toys</li></ul><p><img src="process_1.png" /> <img src="process_2.png" alt="process has virtual addr" /></p><figure><img src="process_3.png" alt="" /><figcaption>page table mapps virtual addr to hysical addr</figcaption></figure><figure><img src="process_4.png" alt="" /><figcaption>some physical addr is in the disk</figcaption></figure><h1 id="pcb-and-context-switch">PCB and context switch</h1><ul><li>PCB has state of execution(program counter, stack), tmp holding area (mm), might require some HW (io device)</li><li>process control block (PCB) includes:<ol type="1"><li>program counter (pc) - current step of the process (binary)</li><li>stack pointer</li></ol></li><li>Context switch: when 2 or more process switch for CPU (ex: p1 switch to p2), it need to record the stopping point for current process(p1) and also upload the stopping point for incoming process(p2)</li></ul><p><img src="pcb_1.png" /> <img src="pcb_2.png" /> <img src="pcb_3.png" /> <img src="pcb_4.png" /></p><h1 id="scheduler">Scheduler</h1><p><img src="scheduler_1.png" /> <img src="scheduler_2.png" alt="the smaller time scheduler takes, higher CPU efficientcy" /></p><figure><img src="IO.png" alt="" /><figcaption>scheduler taks next process from ready queue</figcaption></figure><h1 id="ipc">IPC</h1><ul><li>Inter Process Communication <img src="ipc_1.png" /> <img src="ipc_2.png" /> <img src="ipc_3.png" /></li></ul>]]></content>
-      
-      
+      <tags>
+        <tag>secret</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Process</title>
+    <url>/2020/04/21/Process/</url>
+    <content><![CDATA[<h1 id="includes">Includes:</h1>
+<ul>
+<li><a href="#os">OS</a></li>
+<li><a href="#kernel">Kernel</a></li>
+<li><a href="#process">Process:</a></li>
+<li><a href="#pcb-and-context-switch">PCB and context switch</a></li>
+<li><a href="#scheduler">Scheduler</a></li>
+<li><a href="#ipc">IPC</a></li>
+</ul>
+<a id="more"></a>
+<h1 id="os">OS</h1>
+<ul>
+<li>OS is software to abstract(simplify) and arbitrate(control) HW system</li>
+<li>like toy shop manager - resource management, policy, mitigate</li>
+</ul>
+<figure>
+<img src="OS_element.png" alt="" /><figcaption>OS element: abstraction, mechanism, policy</figcaption>
+</figure>
+<h1 id="kernel">Kernel</h1>
+<figure>
+<img src="kernal_1.png" alt="" /><figcaption>distiguish computer platform as 2 level</figcaption>
+</figure>
+<figure>
+<img src="kernal_2.png" alt="" /><figcaption>application needs OS to support HW access</figcaption>
+</figure>
+<figure>
+<img src="kernel_3.png" alt="" /><figcaption>System flow call ex: user process calls OS then return back to user</figcaption>
+</figure>
+<h1 id="process">Process</h1>
+<ul>
+<li>Process is instance of executing program</li>
+<li>like an order of toys</li>
+</ul>
+<p><img src="process_1.png" /> <img src="process_2.png" alt="process has virtual addr" /></p>
+<figure>
+<img src="process_3.png" alt="" /><figcaption>page table mapps virtual addr to hysical addr</figcaption>
+</figure>
+<figure>
+<img src="process_4.png" alt="" /><figcaption>some physical addr is in the disk</figcaption>
+</figure>
+<h1 id="pcb-and-context-switch">PCB and context switch</h1>
+<ul>
+<li>PCB has state of execution(program counter, stack), tmp holding area (mm), might require some HW (io device)</li>
+<li>process control block (PCB) includes:
+<ol type="1">
+<li>program counter (pc) - current step of the process (binary)</li>
+<li>stack pointer</li>
+</ol></li>
+<li>Context switch: when 2 or more process switch for CPU (ex: p1 switch to p2), it need to record the stopping point for current process(p1) and also upload the stopping point for incoming process(p2)</li>
+</ul>
+<p><img src="pcb_1.png" /> <img src="pcb_2.png" /> <img src="pcb_3.png" /> <img src="pcb_4.png" /></p>
+<h1 id="scheduler">Scheduler</h1>
+<p><img src="scheduler_1.png" /> <img src="scheduler_2.png" alt="the smaller time scheduler takes, higher CPU efficientcy" /></p>
+<figure>
+<img src="IO.png" alt="" /><figcaption>scheduler taks next process from ready queue</figcaption>
+</figure>
+<h1 id="ipc">IPC</h1>
+<ul>
+<li>Inter Process Communication <img src="ipc_1.png" /> <img src="ipc_2.png" /> <img src="ipc_3.png" /></li>
+</ul>
+]]></content>
       <categories>
-          
-          <category> OS </category>
-          
+        <category>OS</category>
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>C code</title>
-      <link href="/2020/04/14/c-code/"/>
-      <url>/2020/04/14/c-code/</url>
-      
-        <content type="html"><![CDATA[<p>C practice</p><a id="more"></a><ul><li><a href="https://leetcode.com/problems/fibonacci-number/" target="_blank" rel="noopener">509 - Fibonacci Number</a> array</li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fib</span><span class="params">(<span class="keyword">int</span> N)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = fib(<span class="number">5</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"res is %d\n"</span>, res);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// approach 1</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fib</span><span class="params">(<span class="keyword">int</span> N)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (N &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> N;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> lib[N + <span class="number">1</span>];</span><br><span class="line">    lib[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    lib[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= N; i++) &#123;</span><br><span class="line">        lib[i] = lib[i - <span class="number">1</span>] + lib[i - <span class="number">2</span>];</span><br><span class="line">    &#125;        </span><br><span class="line">    <span class="keyword">return</span> lib[N];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// approach 2</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fib2</span><span class="params">(<span class="keyword">int</span> N)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (N &lt;= <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> N;</span><br><span class="line">    <span class="keyword">return</span> fib(N - <span class="number">1</span>) + fib(N - <span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li><a href="https://leetcode.com/problems/string-to-integer-atoi/" target="_blank" rel="noopener">8. String to Integer (atoi)</a> math, string</li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctype.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">myAtoi</span><span class="params">(<span class="keyword">char</span> * str)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = myAtoi(<span class="string">"   42  "</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"res is %d\n"</span>, res);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">myAtoi</span><span class="params">(<span class="keyword">char</span> * str)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>, sign = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (str[i] == <span class="string">' '</span>) &#123;</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (str[i] == <span class="string">'+'</span>)</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (str[i] == <span class="string">'-'</span>) &#123;</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">        sign = <span class="number">-1</span>;        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">long</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">isdigit</span>(str[i])) &#123;</span><br><span class="line">        res = res * <span class="number">10</span> + str[i] - <span class="string">'0'</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (sign * res &gt;= <span class="built_in">pow</span>(<span class="number">2</span>, <span class="number">31</span>) - <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">pow</span>(<span class="number">2</span>, <span class="number">31</span>) - <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sign * res &lt;= <span class="built_in">pow</span>(<span class="number">2</span>,<span class="number">31</span>) * (<span class="number">-1</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">pow</span>(<span class="number">2</span>, <span class="number">31</span>) * (<span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">int</span>)res * sign;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li><a href="https://leetcode.com/problems/number-of-1-bits/" target="_blank" rel="noopener">191. Number of 1 Bits</a> bit operation <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">hammingWeight</span><span class="params">(<span class="keyword">uint32_t</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (n &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        res += n &amp; <span class="number">1</span>;</span><br><span class="line">        n = n &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
-      
-      
+  </entry>
+  <entry>
+    <title>C code</title>
+    <url>/2020/04/14/c-code/</url>
+    <content><![CDATA[<p>C practice</p>
+<a id="more"></a>
+<ul>
+<li><a href="https://leetcode.com/problems/fibonacci-number/" target="_blank" rel="noopener">509 - Fibonacci Number</a> array</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fib</span><span class="params">(<span class="keyword">int</span> N)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = fib(<span class="number">5</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"res is %d\n"</span>, res);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// approach 1</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fib</span><span class="params">(<span class="keyword">int</span> N)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (N &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> N;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> lib[N + <span class="number">1</span>];</span><br><span class="line">    lib[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    lib[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= N; i++) &#123;</span><br><span class="line">        lib[i] = lib[i - <span class="number">1</span>] + lib[i - <span class="number">2</span>];</span><br><span class="line">    &#125;        </span><br><span class="line">    <span class="keyword">return</span> lib[N];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// approach 2</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fib2</span><span class="params">(<span class="keyword">int</span> N)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (N &lt;= <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> N;</span><br><span class="line">    <span class="keyword">return</span> fib(N - <span class="number">1</span>) + fib(N - <span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a href="https://leetcode.com/problems/string-to-integer-atoi/" target="_blank" rel="noopener">8. String to Integer (atoi)</a> math, string</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctype.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">myAtoi</span><span class="params">(<span class="keyword">char</span> * str)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = myAtoi(<span class="string">"   42  "</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"res is %d\n"</span>, res);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">myAtoi</span><span class="params">(<span class="keyword">char</span> * str)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>, sign = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (str[i] == <span class="string">' '</span>) &#123;</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (str[i] == <span class="string">'+'</span>)</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (str[i] == <span class="string">'-'</span>) &#123;</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">        sign = <span class="number">-1</span>;        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">long</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">isdigit</span>(str[i])) &#123;</span><br><span class="line">        res = res * <span class="number">10</span> + str[i] - <span class="string">'0'</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (sign * res &gt;= <span class="built_in">pow</span>(<span class="number">2</span>, <span class="number">31</span>) - <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">pow</span>(<span class="number">2</span>, <span class="number">31</span>) - <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sign * res &lt;= <span class="built_in">pow</span>(<span class="number">2</span>,<span class="number">31</span>) * (<span class="number">-1</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">pow</span>(<span class="number">2</span>, <span class="number">31</span>) * (<span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">int</span>)res * sign;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a href="https://leetcode.com/problems/number-of-1-bits/" target="_blank" rel="noopener">191. Number of 1 Bits</a> bit operation <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">hammingWeight</span><span class="params">(<span class="keyword">uint32_t</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (n &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        res += n &amp; <span class="number">1</span>;</span><br><span class="line">        n = n &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
       <categories>
-          
-          <category> LC </category>
-          
+        <category>LC</category>
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Memory management</title>
-      <link href="/2020/04/13/Memory-management/"/>
-      <url>/2020/04/13/Memory-management/</url>
-      
-        <content type="html"><![CDATA[<h2 id="memory-management">Memory Management:</h2><a id="more"></a><ul><li><a href="https://mropengate.blogspot.com/2015/01/operating-system-ch8-memory-management.html" target="_blank" rel="noopener">ref</a></li></ul><ol type="1"><li>Address binding:<ul><li>Compile time addr binding: compiler knows the absolute address</li><li>Load time addr binding: relative addr</li><li>Execution time addr binding: move addr</li></ul></li><li>Dynamic loading: programmer decides</li><li>Dynamic linking: load the func into memory when be called</li><li>Overlays: if func1, func2 are exclusive, no need to load them at the same time</li></ol>]]></content>
-      
-      
+  </entry>
+  <entry>
+    <title>Memory management</title>
+    <url>/2020/04/13/Memory-management/</url>
+    <content><![CDATA[<h2 id="memory-management">Memory Management:</h2>
+<a id="more"></a>
+<ul>
+<li><a href="https://mropengate.blogspot.com/2015/01/operating-system-ch8-memory-management.html" target="_blank" rel="noopener">ref</a></li>
+</ul>
+<ol type="1">
+<li>Address binding:
+<ul>
+<li>Compile time addr binding: compiler knows the absolute address</li>
+<li>Load time addr binding: relative addr</li>
+<li>Execution time addr binding: move addr</li>
+</ul></li>
+<li>Dynamic loading: programmer decides</li>
+<li>Dynamic linking: load the func into memory when be called</li>
+<li>Overlays: if func1, func2 are exclusive, no need to load them at the same time</li>
+</ol>
+]]></content>
       <categories>
-          
-          <category> OS </category>
-          
+        <category>OS</category>
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/03/15/test/"/>
-      <url>/2020/03/15/test/</url>
-      
-        <content type="html"><![CDATA[<p>This is a test :)</p><a id="more"></a><p>hidden:</p><ul><li>ref:<ul><li><a href="https://allen108108.github.io/blog/2019/10/07/%E4%BD%BF%E7%94%A8%20Github%20page%20%E8%A3%BD%E4%BD%9C%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99%20%E2%80%93%20%E4%BB%A5%20Hexo%20_%20Next%20%E8%A3%BD%E4%BD%9C%E9%83%A8%E8%90%BD%E6%A0%BC/" target="_blank" rel="noopener">template</a></li><li><a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics" target="_blank" rel="noopener">LaTex</a></li><li><a href="https://gist.github.com/christech1117/6dc5221c177104990767d6490ad8c7ba" target="_blank" rel="noopener">MD</a></li></ul></li><li>plot:<ul><li><img src="test1.png" /></li></ul></li><li>LaTex</li></ul><p><span class="math display">\[\frac{|ax + by + c|}{\sqrt{a^{2}+b^{2}}}\]</span> <span class="math display">\[|a|&lt;1\]</span></p><p><span class="math display">\[\begin{equation}\label{eq1}e=mc^2\end{equation}\]</span></p><p><span class="math display">\[1=\sum_{i=0}^{m}\sum_{k=0}^{W_i-1}b_{i,k}=\sum_{i=0}^{m}b_{i,0}\sum_{k=0}^{W_i-1}\frac{W_i-k}{W_i}=\sum_{i=0}^{m}b_{i,0}\frac{W_i+1}{2}\\=\frac{b_{0,0}}{2}\left[W\left(\sum_{i=0}^{m-1}(2p)^i+\frac{(2p)^m}{1-p}\right) + \frac{1}{1-p}\right]\]</span></p><p><span class="math display">\[\cos (2\theta) = \cos^2 \theta - \sin^2 \theta\]</span> <span class="math display">\[\forall x \in X, \quad \exists y \leq \epsilon\]</span></p>]]></content>
-      
-      
+  </entry>
+  <entry>
+    <title>test</title>
+    <url>/2020/03/15/test/</url>
+    <content><![CDATA[<p>This is a test :)</p>
+<a id="more"></a>
+<p>hidden:</p>
+<ul>
+<li>ref:
+<ul>
+<li><a href="https://allen108108.github.io/blog/2019/10/07/%E4%BD%BF%E7%94%A8%20Github%20page%20%E8%A3%BD%E4%BD%9C%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99%20%E2%80%93%20%E4%BB%A5%20Hexo%20_%20Next%20%E8%A3%BD%E4%BD%9C%E9%83%A8%E8%90%BD%E6%A0%BC/" target="_blank" rel="noopener">template</a></li>
+<li><a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics" target="_blank" rel="noopener">LaTex</a></li>
+<li><a href="https://gist.github.com/christech1117/6dc5221c177104990767d6490ad8c7ba" target="_blank" rel="noopener">MD</a></li>
+</ul></li>
+<li>plot:
+<ul>
+<li><img src="test1.png" /></li>
+</ul></li>
+<li>LaTex</li>
+</ul>
+<p><span class="math display">\[
+\frac{|ax + by + c|}{\sqrt{a^{2}+b^{2}}}
+\]</span> <span class="math display">\[
+|a|&lt;1
+\]</span></p>
+<p><span class="math display">\[\begin{equation}\label{eq1}
+e=mc^2
+\end{equation}\]</span></p>
+<p><span class="math display">\[
+1=\sum_{i=0}^{m}\sum_{k=0}^{W_i-1}b_{i,k}=\sum_{i=0}^{m}b_{i,0}\sum_{k=0}^{W_i-1}\frac{W_i-k}{W_i}=\sum_{i=0}^{m}b_{i,0}\frac{W_i+1}{2}\\
+=\frac{b_{0,0}}{2}\left[W\left(\sum_{i=0}^{m-1}(2p)^i+\frac{(2p)^m}{1-p}\right) + \frac{1}{1-p}\right]
+\]</span></p>
+<p><span class="math display">\[
+\cos (2\theta) = \cos^2 \theta - \sin^2 \theta
+\]</span> <span class="math display">\[
+\forall x \in X, \quad \exists y \leq \epsilon
+\]</span></p>
+]]></content>
       <categories>
-          
-          <category> test </category>
-          
+        <category>test</category>
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2020/03/15/hello-world/"/>
-      <url>/2020/03/15/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="quick-start">Quick Start</h2><h3 id="create-a-new-post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="run-server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="generate-static-files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="deploy-to-remote-sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-  
-  
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/03/15/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
 </search>
