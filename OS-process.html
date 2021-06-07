@@ -79,13 +79,36 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="ifchicken&#39;s blog">
-<meta property="og:url" content="http://ifchicken.github.io/categories/test/index.html">
+<meta name="description" content="Includes:  OS Kernel Process: PCB and context switch Scheduler IPC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Process">
+<meta property="og:url" content="http://ifchicken.github.io/OS-process.html">
 <meta property="og:site_name" content="ifchicken&#39;s blog">
+<meta property="og:description" content="Includes:  OS Kernel Process: PCB and context switch Scheduler IPC">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://ifchicken.github.io/OS_element.png">
+<meta property="og:image" content="http://ifchicken.github.io/kernal_1.png">
+<meta property="og:image" content="http://ifchicken.github.io/kernal_2.png">
+<meta property="og:image" content="http://ifchicken.github.io/kernel_3.png">
+<meta property="og:image" content="http://ifchicken.github.io/process_1.png">
+<meta property="og:image" content="http://ifchicken.github.io/process_2.png">
+<meta property="og:image" content="http://ifchicken.github.io/process_3.png">
+<meta property="og:image" content="http://ifchicken.github.io/process_4.png">
+<meta property="og:image" content="http://ifchicken.github.io/pcb_1.png">
+<meta property="og:image" content="http://ifchicken.github.io/pcb_2.png">
+<meta property="og:image" content="http://ifchicken.github.io/pcb_3.png">
+<meta property="og:image" content="http://ifchicken.github.io/pcb_4.png">
+<meta property="og:image" content="http://ifchicken.github.io/scheduler_1.png">
+<meta property="og:image" content="http://ifchicken.github.io/scheduler_2.png">
+<meta property="og:image" content="http://ifchicken.github.io/IO.png">
+<meta property="og:image" content="http://ifchicken.github.io/ipc_1.png">
+<meta property="og:image" content="http://ifchicken.github.io/ipc_2.png">
+<meta property="og:image" content="http://ifchicken.github.io/ipc_3.png">
+<meta property="article:published_time" content="2020-04-22T03:12:40.000Z">
+<meta property="article:modified_time" content="2021-06-07T04:28:16.601Z">
 <meta property="article:author" content="ifchicken">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ifchicken.github.io/OS_element.png">
 
 
 
@@ -115,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://ifchicken.github.io/categories/test/"/>
+  <link rel="canonical" href="http://ifchicken.github.io/OS-process.html"/>
 
 
 
 
 
-  <title>Category: test | ifchicken's blog</title>
+  <title>Process | ifchicken's blog</title>
   
 
 
@@ -140,7 +163,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -278,55 +301,231 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>test<small>Category</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ifchicken.github.io/OS-process.html">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ifchicken">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ifchicken's blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/test.html" itemprop="url">
-              
-                <span itemprop="name">test</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Process</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-03-15T19:48:48-07:00"
-              content="2020-03-15" >
-          03-15
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-21T20:12:40-07:00">
+                2020-04-21
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OS/" itemprop="url" rel="index">
+                    <span itemprop="name">OS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="includes">Includes:</h1>
+<ul>
+<li><a href="#os">OS</a></li>
+<li><a href="#kernel">Kernel</a></li>
+<li><a href="#process">Process:</a></li>
+<li><a href="#pcb-and-context-switch">PCB and context switch</a></li>
+<li><a href="#scheduler">Scheduler</a></li>
+<li><a href="#ipc">IPC</a></li>
+</ul>
+<a id="more"></a>
+<h1 id="os">OS</h1>
+<ul>
+<li>OS is software to abstract(simplify) and arbitrate(control) HW system</li>
+<li>like toy shop manager - resource management, policy, mitigate</li>
+</ul>
+<figure>
+<img src="OS_element.png" alt="" /><figcaption>OS element: abstraction, mechanism, policy</figcaption>
+</figure>
+<h1 id="kernel">Kernel</h1>
+<figure>
+<img src="kernal_1.png" alt="" /><figcaption>distiguish computer platform as 2 level</figcaption>
+</figure>
+<figure>
+<img src="kernal_2.png" alt="" /><figcaption>application needs OS to support HW access</figcaption>
+</figure>
+<figure>
+<img src="kernel_3.png" alt="" /><figcaption>System flow call ex: user process calls OS then return back to user</figcaption>
+</figure>
+<h1 id="process">Process</h1>
+<ul>
+<li>Process is instance of executing program</li>
+<li>like an order of toys</li>
+</ul>
+<p><img src="process_1.png" /> <img src="process_2.png" alt="process has virtual addr" /></p>
+<figure>
+<img src="process_3.png" alt="" /><figcaption>page table mapps virtual addr to hysical addr</figcaption>
+</figure>
+<figure>
+<img src="process_4.png" alt="" /><figcaption>some physical addr is in the disk</figcaption>
+</figure>
+<h1 id="pcb-and-context-switch">PCB and context switch</h1>
+<ul>
+<li>PCB has state of execution(program counter, stack), tmp holding area (mm), might require some HW (io device)</li>
+<li>process control block (PCB) includes:
+<ol type="1">
+<li>program counter (pc) - current step of the process (binary)</li>
+<li>stack pointer</li>
+</ol></li>
+<li>Context switch: when 2 or more process switch for CPU (ex: p1 switch to p2), it need to record the stopping point for current process(p1) and also upload the stopping point for incoming process(p2)</li>
+</ul>
+<p><img src="pcb_1.png" /> <img src="pcb_2.png" /> <img src="pcb_3.png" /> <img src="pcb_4.png" /></p>
+<h1 id="scheduler">Scheduler</h1>
+<p><img src="scheduler_1.png" /> <img src="scheduler_2.png" alt="the smaller time scheduler takes, higher CPU efficientcy" /></p>
+<figure>
+<img src="IO.png" alt="" /><figcaption>scheduler taks next process from ready queue</figcaption>
+</figure>
+<h1 id="ipc">IPC</h1>
+<ul>
+<li>Inter Process Communication <img src="ipc_1.png" /> <img src="ipc_2.png" /> <img src="ipc_3.png" /></li>
+</ul>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/c-code.html" rel="next" title="C code">
+                <i class="fa fa-chevron-left"></i> C code
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/LC-25.html" rel="prev" title="LC-25 Reverse Nodes in k-Group">
+                LC-25 Reverse Nodes in k-Group <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -334,6 +533,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -354,8 +557,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -415,6 +627,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#includes"><span class="nav-number">1.</span> <span class="nav-text">Includes:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#os"><span class="nav-number">2.</span> <span class="nav-text">OS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#kernel"><span class="nav-number">3.</span> <span class="nav-text">Kernel</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#process"><span class="nav-number">4.</span> <span class="nav-text">Process</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pcb-and-context-switch"><span class="nav-number">5.</span> <span class="nav-text">PCB and context switch</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#scheduler"><span class="nav-number">6.</span> <span class="nav-text">Scheduler</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ipc"><span class="nav-number">7.</span> <span class="nav-text">IPC</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -577,6 +805,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -935,42 +1167,7 @@
         onPopupClose();
       }
     });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -988,6 +1185,21 @@
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
   
 
 

@@ -1,8 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Back-of-the-envelope Estimation</title>
+    <url>/SD-estimationNumber.html</url>
+    <content><![CDATA[<h3 id="powers-of-two-table">Powers of two table</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Power           Exact Value         Approx Value        Bytes</span><br><span class="line">---------------------------------------------------------------</span><br><span class="line">7                             128</span><br><span class="line">8                             256</span><br><span class="line">10                           1024   1 thousand           1 KB</span><br><span class="line">16                         65,536                       64 KB</span><br><span class="line">20                      1,048,576   1 million            1 MB</span><br><span class="line">30                  1,073,741,824   1 billion            1 GB</span><br><span class="line">32                  4,294,967,296                        4 GB</span><br><span class="line">40              1,099,511,627,776   1 trillion           1 TB</span><br></pre></td></tr></table></figure>
+<h1 id="resource">Resource</h1>
+<ul>
+<li><a href="https://colin-scott.github.io/personal_website/research/interactive_latency.html" target="_blank" rel="noopener">Latency number</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>System Design</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Consistent Hashing</title>
+    <url>/SD-consistentHashing.html</url>
+    <content><![CDATA[<p>Used for re-sized hash table without moving most of data</p>
+<h1 id="resource">Resource</h1>
+<ul>
+<li><a href="https://blog.csdn.net/sparkliang/article/details/5279393" target="_blank" rel="noopener">ref</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>System Design</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Rate Limiter</title>
+    <url>/SD-rateLimiter.html</url>
+    <content><![CDATA[<p>Rate limiter could implmented by each API/ each IP/ total region Might save the rule in DB / config file</p>
+<h3 id="where-to-implement">Where to implement</h3>
+<ol type="1">
+<li>server side
+<ul>
+<li>Fully control</li>
+</ul></li>
+<li>middleware
+<ul>
+<li>API gateway</li>
+<li>Might be 3rd party</li>
+</ul></li>
+</ol>
+<h3 id="algorithm">Algorithm</h3>
+<ul>
+<li>Token bucket</li>
+<li>Leaking bucket</li>
+<li>Fixed window counter</li>
+<li>sliding window log</li>
+<li>Sliding window counter</li>
+</ul>
+<h1 id="resource">Resource</h1>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=FU4WlwfS3G0" target="_blank" rel="noopener">Good video</a>
+<ul>
+<li>Need to review again to get deeper</li>
+</ul></li>
+<li><a href="http://blog.gssxgss.me/not-a-simple-problem-rate-limiting/" target="_blank" rel="noopener">Code for TokenBucket</a></li>
+<li><a href="https://www.jiuzhang.com/article/info/?isPreview=false&amp;shortUrl=H0hJlI" target="_blank" rel="noopener">九章算法</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>System Design</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>system design</title>
+    <url>/SD-systemDesign.html</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="4d729f05c40af486792e07e0f89a49b1be4f0bedcc567ce49f1b2f56e3146998">27c5370ec477f4ada4932eeedba6a890d056c9a86c02a59eef5ff39fad66e2ce0860247038649bc190974f2bfcc937d4471c899aa93dbfc419375fd684f6f9184827c02378e5e566c20c57eaea15e9de41e7c0d1220fa70ba2d0b91d3f649938292dea2c144e078e5f67893a7bae602a949a950eb2af633d3a116680ab19981016aaf9a420554274700cdcc74476cbc970437d2c852580617791230aef8a4026e895cf6f1bb7adcdb731c6bf88f3efc9b23c6fa041490f00dd1142aa4178d05ce38aaee03fd7cc55840b5add786c6e48b30fbeb0de46191d9f5efd04751b556f621c338b06acf67c2a7e35bbe271dcc2bc518d0c30f3a5d12fdfddc604eb8961709b0637bc66a65fc3ad6876ade67a859df0ae8ad150f97d2a1955e425395c40554bc31810d2081410d1434b5672a244de3bd5936ac3c35888f767807101f81db13fd55ccc3f07d23efae85e11965184d3c3f69c1b187c4337db75ed618c9f895300b06301147ef1a567ffc33799a9df22a590eb157306ad54cbd2daf40e2881b568bf5b3c1252833b5903805cc8a4de4f93299db817f189f284285e09a5851ada23eed1e8e80d35a85f9c88ecd4fe881d1048a860f12d654dd98cad98792a89ee5e95d7d9daadaedc35ebfe1e1883f37ec92225ae589315ed751c0cf819da97e3974cf6744b975a3cb26b4095555d107b8864856fc88ec844cc98866d9c0f0c78c60374df62aa3dbef05ccdf1a49c3f747fec1ff3dfb552645b051b55adef330f88eb1869aefd79c4c089205360c72023fc87290f8d009285683309b26cdbe8</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 這裡需要密碼.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>System Design</category>
+      </categories>
+      <tags>
+        <tag>secret</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LC-25 Reverse Nodes in k-Group</title>
-    <url>/2021/06/05/LC-25-Reverse-Nodes-in-k-Group/</url>
+    <url>/LC-25.html</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
   <script id="hbeData" type="hbeData" data-hmacdigest="e96ca93d89a822fac626a71fde68d6b6586737be2e36ecc240ee6efde3ab5243">27c5370ec477f4ada4932eeedba6a8902255f9a2f5ac9881a96a61dedcb795af5167f38d7364b375499328d396ec21a5239cb0b13cd683dc6c9ef03b753ca8547dc2795ccaf147ee60e9d4d70be93d8076dafef0a69364291105542f4d7c01244767bf68bc9d33e6bba8c693a06fbec260dcb8da0fb1e4e0f758c0218f5591d05f9ec475bd7411e8cf59672bbb83bf33d5f0affce615c740a6d61e4329fec593</script>
   <div class="hbe hbe-content">
@@ -24,7 +111,7 @@
   </entry>
   <entry>
     <title>Process</title>
-    <url>/2020/04/21/Process/</url>
+    <url>/OS-process.html</url>
     <content><![CDATA[<h1 id="includes">Includes:</h1>
 <ul>
 <li><a href="#os">OS</a></li>
@@ -92,7 +179,7 @@
   </entry>
   <entry>
     <title>C code</title>
-    <url>/2020/04/14/c-code/</url>
+    <url>/c-code.html</url>
     <content><![CDATA[<p>C practice</p>
 <a id="more"></a>
 <ul>
@@ -113,7 +200,7 @@
   </entry>
   <entry>
     <title>Memory management</title>
-    <url>/2020/04/13/Memory-management/</url>
+    <url>/OS-MM.html</url>
     <content><![CDATA[<h2 id="memory-management">Memory Management:</h2>
 <a id="more"></a>
 <ul>
@@ -137,7 +224,7 @@
   </entry>
   <entry>
     <title>test</title>
-    <url>/2020/03/15/test/</url>
+    <url>/test.html</url>
     <content><![CDATA[<p>This is a test :)</p>
 <a id="more"></a>
 <p>hidden:</p>
@@ -178,7 +265,7 @@ e=mc^2
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/2020/03/15/hello-world/</url>
+    <url>/HexoCMD.html</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="quick-start">Quick Start</h2>
 <h3 id="create-a-new-post">Create a new post</h3>
