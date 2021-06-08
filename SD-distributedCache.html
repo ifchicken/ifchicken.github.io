@@ -79,13 +79,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="ifchicken&#39;s blog">
-<meta property="og:url" content="http://ifchicken.github.io/tags/secret/index.html">
+<meta name="description" content="Requirement  Functional (put, get) non-functional (high scalability, high availability, high performance)  Simple solution  client -&gt; local cache -&gt; Data storage LRU  Scale to multiple machine">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Distributed Cache">
+<meta property="og:url" content="http://ifchicken.github.io/SD-distributedCache.html">
 <meta property="og:site_name" content="ifchicken&#39;s blog">
+<meta property="og:description" content="Requirement  Functional (put, get) non-functional (high scalability, high availability, high performance)  Simple solution  client -&gt; local cache -&gt; Data storage LRU  Scale to multiple machine">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://ifchicken.github.io/SD-distributedCache/architecture.png">
+<meta property="article:published_time" content="2021-06-08T05:16:47.000Z">
+<meta property="article:modified_time" content="2021-06-08T07:04:51.992Z">
 <meta property="article:author" content="ifchicken">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ifchicken.github.io/SD-distributedCache/architecture.png">
 
 
 
@@ -115,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://ifchicken.github.io/tags/secret/"/>
+  <link rel="canonical" href="http://ifchicken.github.io/SD-distributedCache.html"/>
 
 
 
 
 
-  <title>Tag: secret | ifchicken's blog</title>
+  <title>Distributed Cache | ifchicken's blog</title>
   
 
 
@@ -140,7 +146,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -278,82 +284,198 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>secret<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ifchicken.github.io/SD-distributedCache.html">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ifchicken">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ifchicken's blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/SD-systemDesign.html" itemprop="url">
-              
-                <span itemprop="name">system design</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Distributed Cache</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2021-06-05T23:22:43-07:00"
-              content="2021-06-05" >
-          06-05
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-06-07T22:16:47-07:00">
+                2021-06-07
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/System-Design/" itemprop="url" rel="index">
+                    <span itemprop="name">System Design</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/LC-25.html" itemprop="url">
-              
-                <span itemprop="name">LC-25 Reverse Nodes in k-Group</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2021-06-05T21:12:43-07:00"
-              content="2021-06-05" >
-          06-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <h3 id="requirement">Requirement</h3>
+<ul>
+<li>Functional (put, get)</li>
+<li>non-functional (high scalability, high availability, high performance)</li>
+</ul>
+<h3 id="simple-solution">Simple solution</h3>
+<ul>
+<li>client -&gt; local cache -&gt; Data storage</li>
+<li>LRU</li>
+</ul>
+<h3 id="scale-to-multiple-machine">Scale to multiple machine</h3>
+<ul>
+<li>local cache is not enough -&gt; distributed system</li>
+<li>separate service / cache server</li>
+<li>sharding cache server (Consistent Hashing)</li>
+<li>Cache client call config service(ZooKeeper) to discover all cashe servers</li>
+<li>master / slave for cache server
+<ul>
+<li>put: master</li>
+<li>get: slave</li>
+</ul></li>
+</ul>
+<p><img src="SD-distributedCache/architecture.png" /></p>
+<h1 id="resource">Resource</h1>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=iuqZvajTOyA&amp;t=12s" target="_blank" rel="noopener">original video</a></li>
+<li><a href="https://xie.infoq.cn/article/d7cb531aa198e1e8a6750273f" target="_blank" rel="noopener">zookeeper</a></li>
+<li><a href="https://www.bilibili.com/video/BV1di4y1b7pA/?p=2&amp;spm_id_from=pageDriver" target="_blank" rel="noopener">ref2</a></li>
+</ul>
+<h1 id="todo">TODO</h1>
+<p>cache miss, search from disk? Bloom filter? SStable?</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/SD-estimationNumber.html" rel="next" title="Back-of-the-envelope Estimation">
+                <i class="fa fa-chevron-left"></i> Back-of-the-envelope Estimation
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -361,6 +483,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -381,8 +507,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -442,6 +577,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#simple-solution"><span class="nav-number">2.</span> <span class="nav-text">Simple solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scale-to-multiple-machine"><span class="nav-number">3.</span> <span class="nav-text">Scale to multiple machine</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#resource"><span class="nav-number"></span> <span class="nav-text">Resource</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#todo"><span class="nav-number"></span> <span class="nav-text">TODO</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -604,6 +755,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -962,42 +1117,7 @@
         onPopupClose();
       }
     });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -1015,6 +1135,21 @@
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
   
 
 
