@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="secret," />
 
 
 
@@ -79,16 +79,17 @@
 
 
 
-<meta name="description" content="C practice">
+<meta name="description" content="需要输入密碼查看哦。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C code">
-<meta property="og:url" content="http://ifchicken.github.io/c-code.html">
+<meta property="og:title" content="LC-322 Coin Change">
+<meta property="og:url" content="http://ifchicken.github.io/LC-322.html">
 <meta property="og:site_name" content="ifchicken&#39;s blog">
-<meta property="og:description" content="C practice">
+<meta property="og:description" content="需要输入密碼查看哦。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-15T01:02:59.000Z">
-<meta property="article:modified_time" content="2021-06-07T04:27:28.796Z">
+<meta property="article:published_time" content="2021-06-20T18:09:55.000Z">
+<meta property="article:modified_time" content="2021-06-20T23:40:40.484Z">
 <meta property="article:author" content="ifchicken">
+<meta property="article:tag" content="secret">
 <meta name="twitter:card" content="summary">
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://ifchicken.github.io/c-code.html"/>
+  <link rel="canonical" href="http://ifchicken.github.io/LC-322.html"/>
 
 
 
 
 
-  <title>C code | ifchicken's blog</title>
+  <title>LC-322 Coin Change | ifchicken's blog</title>
   
 
 
@@ -296,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ifchicken.github.io/c-code.html">
+    <link itemprop="mainEntityOfPage" href="http://ifchicken.github.io/LC-322.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ifchicken">
@@ -313,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">C code</h1>
+          <h1 class="post-title" itemprop="name headline">LC-322 Coin Change</h1>
         
 
         <div class="post-meta">
@@ -325,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-14T18:02:59-07:00">
-                2020-04-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-06-20T11:09:55-07:00">
+                2021-06-20
               </time>
             
 
@@ -390,20 +391,18 @@
       
 
       
-        <p>C practice</p>
-<a id="more"></a>
-<ul>
-<li><a href="https://leetcode.com/problems/fibonacci-number/" target="_blank" rel="noopener">509 - Fibonacci Number</a> array</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fib</span><span class="params">(<span class="keyword">int</span> N)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = fib(<span class="number">5</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"res is %d\n"</span>, res);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// approach 1</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fib</span><span class="params">(<span class="keyword">int</span> N)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (N &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> N;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> lib[N + <span class="number">1</span>];</span><br><span class="line">    lib[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    lib[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= N; i++) &#123;</span><br><span class="line">        lib[i] = lib[i - <span class="number">1</span>] + lib[i - <span class="number">2</span>];</span><br><span class="line">    &#125;        </span><br><span class="line">    <span class="keyword">return</span> lib[N];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// approach 2</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fib2</span><span class="params">(<span class="keyword">int</span> N)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (N &lt;= <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> N;</span><br><span class="line">    <span class="keyword">return</span> fib(N - <span class="number">1</span>) + fib(N - <span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><a href="https://leetcode.com/problems/string-to-integer-atoi/" target="_blank" rel="noopener">8. String to Integer (atoi)</a> math, string</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctype.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">myAtoi</span><span class="params">(<span class="keyword">char</span> * str)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = myAtoi(<span class="string">"   42  "</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"res is %d\n"</span>, res);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">myAtoi</span><span class="params">(<span class="keyword">char</span> * str)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>, sign = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (str[i] == <span class="string">' '</span>) &#123;</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (str[i] == <span class="string">'+'</span>)</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (str[i] == <span class="string">'-'</span>) &#123;</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">        sign = <span class="number">-1</span>;        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">long</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">isdigit</span>(str[i])) &#123;</span><br><span class="line">        res = res * <span class="number">10</span> + str[i] - <span class="string">'0'</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (sign * res &gt;= <span class="built_in">pow</span>(<span class="number">2</span>, <span class="number">31</span>) - <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">pow</span>(<span class="number">2</span>, <span class="number">31</span>) - <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sign * res &lt;= <span class="built_in">pow</span>(<span class="number">2</span>,<span class="number">31</span>) * (<span class="number">-1</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">pow</span>(<span class="number">2</span>, <span class="number">31</span>) * (<span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">int</span>)res * sign;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><a href="https://leetcode.com/problems/number-of-1-bits/" target="_blank" rel="noopener">191. Number of 1 Bits</a> bit operation <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">hammingWeight</span><span class="params">(<span class="keyword">uint32_t</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (n &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        res += n &amp; <span class="number">1</span>;</span><br><span class="line">        n = n &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="07f4bcbcffa1362c03ed84f604b06dae3a99246a64a0ddee46f4d8ab7be62d2a">27c5370ec477f4ada4932eeedba6a89028124a0c8609bc193333405577523bf132dccab412c5daf0d43adad22df3b4cc5a01eda64dd75f11620542ce1e51a3f65127f3b027a3147b0d00ea748c63cf19331584fd1ec86f97d8946e4b488a10829ef61605cac74f6007f5350df06db80bc5ead27cc56973bd3588ee18d0b3da2d28e81d920c6d001e64a808931f2cd3918c676018f2b0694abfaf305487db89a5eb7345227337cfc0ec89bff83fcf6d7dadfcf807db6a1bc2dbbb64dbaadcf67e9dabf0907eb006474d54739dbdedc7a6df0fbb58523f581ddbdcf4c45ff554b301661447fada017a6a6dc183ee2bc714626a2ef8b4301a806fbe26b2d3a8de8f59bef6b53bf8f88d91f01a2a2ead3a8421cd2a0e2a284492fe685b4810e824e96e38c144745d2c1a4cf6e60d21a92d14e8f960f5443b05fc711bac411fb25291c4e4021f5e3c2554a54cff5827f9e787be9ed68890a8e589babe9e3683c2f669b65be508347b60c981f6a1782da794b1af3fac3663d261cd0569068a40c0794a31bcabd67eebddc82fd011eb6238572d08e94499201f470fa6fee84618b86829ac82d221a3db0bfbf38bb3a4d81c8be6c4546b5e0c203908b07b4af6c5210a8a2b2bc869d924f7d91ba3acdb3817f47313e8008d947ef828ca864b9355ad28918dffdea3d7b72019371c407ffc5ec97c00518af5d379adf6fb3c1fc8cc4e5e90f816fa121c60d79a08c222b517d1bfb49bdc559bbfac2a46ec0b730afed60551da88e1aee444291ab253ea086d3b9e594ee7bf29bf698a3049e044901f20c0b418e6a9c8454de17784cb0dd66a017645d787a3a339780f55e52e8f4bd97a57b3f450e1e18acf8f46187845d65ac377132fe3d1200cb8b81409e094b010a5f1752b22c1a383120befe656f8956b0f7a60a62c30c1d6326e920fa29fc34436ebe1ae0c2dd56e3f1174768eb7d7920a52f330a79d243110d05f4f686f3a5443d53327a5b7e45dab81404c92940197a2df5184455c447ca182cd33c6c22151ceeb4d0ec63ddcd3001ab4f6954c9b2a6edd409113c4acad99ab83c204e43eafba4b6f00381a5e3c2a9b3bc9f3bbe718bc5459a997b74b85fd83a077b593bc2695e286c45359af6eba1fd2015aa31c89f1752435480db2f51f2d59e958d60e6ce2992c147544fab10eadc81b3c14d2de62d138addf6b194635c7309edcf874a97007c8442b376215b94d7e5a9ae7d1eaedf95590162bc87be96cc60c485fa9daeb6cfcbf7ce294c21562271e6febc11f9f069dad85cce013bffa41c71aed236b064df76f8027aca770ddfc8a0200c857bba792aa2e6484111ac276ccaa74dbdaa1ee036ef68c6f648c4a450b557b170296df0b6467acd032285d0b04dcc7c6befcbc8ba62c299bc4c688c2f34902028909ee6f83804192560288ccc9f96d03964b93fdff140a43d4bda9a53747198faae668653d756b1ce74205c302bb9531f11e724b0ebab758b1ceabfef950e7654ca8cc0dad9b04b62e5611782ba81e630c8449c8a196640df0df385e8c17034b2fdd1e955255b538578b70ccab3fb9f2a2a285f3243c6bf880e5a8aafc0502ae234f08fab53803ca023bb90819999c4f7be7a93e96dc7265af397e70cfb1f39bb5b366afce97b9b851fa2cb4163bac2fe840ae5dbff6597dbea144e6f2c56fcbd8ca00a6e86990fb8bff3a2429e3dfad5f7ed6cfff2953432cc03020ea7d76302c2260071b7b8b4a7c31fcfb28f1ecf69791d87187d110c8fe9fc74e6c77c586a323f4877ca0544895528cc931d37ed55fc64013cc06d816c162da2ce833cda964730315e0154f4089c6fb377a611f2261b15d2efe5678a5efc7c50ff6640d9b600f34ebc35f431b60379b60d726f70f6cbf5f6cb609d2f18cafc44779ede0e4732c81442fb1b8104a5106c1a39149b2f3906a36d1f31dc035ab514ecc4cff47459dd2cef42bb55c52cf37ad2bd575c58343347690f7dc60e2746a998894477fed516adabb4bb29a36a5c0f3f3f911774c55b732e677ef8c60437c13dee19879b701318d6dce5e37c6dd94c03ca8e7fc7a54036e6f0836a33352c052c011f8a2e3587323e80faad67594b60ba5c7428fdc61befdf80d9ca2f7bf32d5ee72655a54171d08babb3b9fb69ef1ca01c99bc6219f5f71a2ec51d5e142b9ff2082920ca233bcc34f2e4ce0bfa71693309a426300f29f1b15bc3ccec62cbe1ca46c7bec0145170a7d309a100e7760aa36808dc5b91eb9c1e22db24e1f6e56cfed8f7549680e4fa32148fea0188e5dd3e31e0f7473206d7a03eb6b1750b73510f09f4bcc772f35d8f1114308915ebe9e564420e8024eef35a5351afc85de4f42e3d9124d9c868d2186ddd59de3167415aa22e3642351258b9e5166674b9bee6ee95b51b90cdbbcb1e273246530ad8c59c808e114b2cce6f8b86a43e49f62ad9d00f625727c09d17794055f513a2ca6a253c4c198e52168c0a015a1e126a5c509cd79c1e97d1db4ca7156d42c15e0e5ff7220898e834686c1bdfc87f151fcec3c11a3b66cf3e19e0dca49ea49585a098232bed2b8684e0c297bb5c5e11d63e03d26d7977dbcc7ba40491aaa84178cef27cbbecbcd3725177794216821754d7aa758effe88eb44d140462b60ca9be402134807a4c23acf926214a6a980f75814640da5beac557a45b91bc046bf5f133eb33590695360bbbb44613b74f4429467412b3330e5675fe673d89ebaec4bcd5418f76a22a7ad37b25a06daf739263d5fcc557ee6df034d0833c23e01583c5d87283204680507c29248a1e7ce8156b822a5b24d5d2c956c6c96b18a8aa261eff4a645dda7bbb7b6f98caf45d5e5c653c5e0a2fefbaa25808d551fc2afbed5ea2712c3bc4361f5acb928834a70e7993794f41b7e9b90b689b4a06a7340241d5791bdc20d9f05700326cdbd9a43236bc2b4daeff66113c5510fab8e57bb6d17c7f44411c04d19c58adb50a30ef6036db314dde4b042e836ee9cc2088f948035e298aed5eaa770410260be74996b7c9a0966d168de3e66753d94b7bc00cefa046fbe16048f42312c02531ac632674bb53b519125f038c50d75ee45fa6b90a8c477a857615f27e9e098fb05a47c1f19d25cff1f07798adaaea11b2259145613e44f89e12ef7fe1ca7deceacb886e018b5a4e6712b8c2a8585402a079a866a8ff9981a41cdd5b239c40578e6ed23d6e01be24245f84ef97c5715b3baee00786ec84cbc6fe0f711653acab9e8a6fa5f5c3faf082671a05273100a669db0c82e128069af56ccf3671a9b7c7b2a80158fd61c5d59e8d6ec190960bb020f159dd9dc4f7cec15cc6d1ca920a2878e13d30bddf3e1ec044c282a91822d59f96a47c40184f4df44aa41362b63011611216520e4e548bc7f8bcf565f49fed3b133df49377844f8fbe8d69e0eab706c77e1f51554b4d9ca7f90da2c176283df7d64bf4a537aee7f9d7c945084f810cd9ced7fdf25f096e1af3a6f8127a7272e189bd6d41a7f656b51387d7b18e2996c678e835fe5b366c5b84b1d654662db36a9239ff4e3a2865a3cdc54f95f8fa64e91e900755bcb55c28763ec94f0b493df6996346104d159522616369be2c4231519d72c0f6bcf8aa4e9ef59cdb764eecdb4cc1c383e8f124c757396e4850d37ed5c6b2c00bb80057b011a66e39509df35842f30bc78955f22f48831fdc60f63721b1e40b83d9694756f807d388527968fc59090a15fa4a9b99f295316707921a53fe3b2b79b1ece143248347309760746a7ee6b2306cca2a42df5feb95f770e9f4fddd72b5d6274ed79ad9f82672a8b0e99dee9aec5dd9e9c88b66b407d84b9e9138484198cb281f1ad732a29f12740179364d42510e31ca3189aa448e034b55b3262de8c2a2aa6fa62563cca95e31503e79ab71d676e33e2f224a0ca17531370e66dc40a4d57ab1fb5bd20eaf8a2c8aa1ea88f2172158f24a3d21f940eb21139469076380aba5195f780d0b8bfa574de31acf65fdf004108037596528235dce386128499070fe031900b7de57a0041e044cbc2eccfccba7d0b41ae5dca195a1fb880b2e0612ef0888b49ce67cd5e06598186b514166625d8b16839e6e9472b32d0127980655a88f0618c8471d236625ab60046e9b40f71dc600e8db1c710b51601f1f62afd44550efbdc77064fe6dbcebb9135d833980bbc548a17adaee6701965eb1bb6b858e57d6053f548096964fd1d481845d7d20d8bcf1cdd21bb038f1f76e0cec1286b2d114803938bd6d156213a7f6b56eea04fdf16f3129cff5870a5cb57b7eb174968ef74d498d7db2b8a1ff2bbbe549b6d7467e6f8097f9e266f7fdb3fd51ce83e819d365afa3b02d6db3caf9eb55fc6dfec4d08a564441f976e7c81a0a345c248def2cfd0202cb87f864ac366851cbb74616d40dab85ad88158884ff5389cf83c0785d6539d9af050db2d4a6aa37770a273aef35b8bd70afe455db915925b0e6e4585ebad8a0825524755ad9fd4485d0d21c6a9d56d03e07c5710f88ff56507cdbb7c783b3433bfbf11bef9cb6c9498eb9fa4d064befb718ed86df6b4f34e1a55969fe51f6172c373f861f15ee5c3df8c07f30b1be26613d2b3f5cc68768534300edafb855064827bec024d10d5c8b367ee2dcbf329b280658015f01a91e8a1966518421b28bf73b7a483d6395f556365af1bd61f3975266907ffd2593464fecfa9fbdf2b93d9dd421bea9b5c0f4e61c5fa94f5a8f3a0c3f8bcbba2fc523e0e1ba145bb0eea1dc84df7f409b8856933c14cc0ac4387be9dd07930f8abf63e5bcfc8d552566e49130d8511f487d9c75b1b62b2b8cefe384bc90e799615a2e6c618075c18a512fd318686f0a5934e139154f42f19c67f0a70c2a1913c7ce6b0491078b56b920826004822367b70fa435d7e55be1c80f306b1a4e16349486963fdb0fc9b204c87c5f046d7b91859c2750dc7f410bd272bf1c72d037ee0370a07af5ea4c22cb6bea9cb7e95b85686bddd1d1b9ecf1e611363498458119f21510e2a18aa269e448bb7895f077571878784e8ca6d4984734cb07579263f73046f9d1b0d30c6c379385d53dd872ae49847c03a9156737903b9e6e36a8198574c5c8ae4c3d99ce155a46588602c5c099df2afa6bf71c2752af71b7ae135b06ad3105b1121dfbb6479e5a3e4c78b293215a39f3a67c956ffbdfb8562bc01ff41e8f3b8466e40f85b01dccdc4abeb5ebee16de3d120a8bf1376d83cc484876dcc28503d8890823c45b8a842b2438967fb66e48b7ca236fde3d1bb350ee80d58867e8a6d92db027caf7ea471f5e9369ffb787d93943ccf70bef31c2febb7700bd370e821f3d33a7f6465f524fdf3e0862c8a2ae769939d9d1c9c6d32eda7d54e14d44a3bd0f07d39a5680964f741653233448767376640fa6ed24ed33d35d42ed5d076cfb443121dcaa8e95b61b4c4360b6546111574d1c49a62854dbd56090096663a18e73d4867901d3cf9c3e3124564308efab1fd6d30c4ea4a231e061ad4f9e39dc7e6012c407eea458408acbc23eeb1007b6397f2a27ac4b908b2a8aefbddbddd1ae01b4293b6552fc4d1f3dce0dec093170bb8af125ac239c019186ec935fa66a69240d280a179784fd50e871919d9504625f04afb75fe18aea4556abe380425bcb2b605617c30b5ec74a48992dc76f904af7d534d70fc5c6f554e0a1a193f860c1e0759875cd62bd8a19c409667423abf7313729589b2036538d64d7bf24f65a438b5a2d9be2b4cbbf285cf88f73b2f142324acdddc248d7586b5e03213ecbffc7a90eadc954c425529835c811863a84f9c708fe87f9e99ec731428df788ea8050b5473732e31f3425f5ea36f5a0f71838bdfd38eb097cc50064d0feda212fe995c1f7125fc8b059ed63247dc39b014791c900f3fc707149d50d83d31893df9a96b1fc3a62a600abeb1e1e877e000d09c53bd74e5a20fc730e2ca42e1fd6a5342334dc8025740645d99f818b009f5aafd97832e1d1d202f42b8ad83e724da9b569f1fc58cde2d3f7a6a0999350cb46503af100979d050218068fe2ce41024dde3a570545ef6fa1fa27ecb445fac415c2c3693f0bd28ea1426cad0e5aed2597f87ca84aec4927e6b4918d09d5be71655094db35f6ce8f99fdc12814c84ec25c723440e897edc82ae7ed34af9c6c0e437f82c38c510612d374fff47186a8235238cf6e93f36b611c9b346b004aa61c1edfdacfa23ee758ee5d81d6f6005b70b495680ddc4604c2aed252d2e750a90802f8fe014b80b5ff59cb0e1af1507cd092fba5f249387ead58fb1eaa82c5011969919b1f955713541fb31d5d564182d4d669b75ccbe2ab222b4cfe8a90112106c327102907baff13671851896566c8de91d70f8d550bf647d92946e38c6ab0fa436476823e2523b4824e9ee8f3f39293691a94faa3cea9e77ff9024e616feb5d84ce9352b913c5e708df195dd2a4c24fb2c5e4ea493c33554d335c3a0ec54fa120f7cee2791a6db06910003a165b822c458f14cec02bc22a5c6d1fbd0585f3201c7ac953afc717df6b3727a00087c715f0e8c25f7c7605f72ec186fd576fb052b40322c3888eec3994e79aa12f0c28d22804859146406d8031a26e654703c50af1594f1fdadcffe553ca0b9903ab665ebc39a943ef53380c4e3d146807e00fc6a49b34341498e4e134cae9e5251d41777f0bde5f244b79bd0f102b11f57740bdbedfef9faabfc63425c16b10601ca1a331bb18890492c75c4f00737088956dd5f82209afdffedb66f71947dea26babcca3bc611fce04bda6dae7525c222b433236368ac4fbb304d5978ad171dc627bb1c5571ac22815c989ffd20f79b7cedfcc71b1bd11be6998a6d9b416e28083a541373defa7def4935339f22f34b2a9d3ff75ba99b7979e8be51f9191a9c7143a44df5e65a1087afc69ee08208fd5ccee2105d881e822bdae816f376b74f0cfbc513c4518ba92839737ff8f3f209da636bf000aad6824d34acc414c530bad6ee2a85f68769b3f28aadab93a6ad95e26348a01b6cc66787b1c1522e046f0bc034e53081bfc5df34be76420ca96516c07442f538bb81294bfb797604ef0eb9c0b3d89539bca3596ef55e86b1644f0e6263ad8aeaea5c4dd99ef82f4bdfbd079d0c8cd1e6116c4ef9cc3988d98930ca8862fd9ceb8d253f26eda129c6cfac83b3c9806ec913b5a4d31ef5ff3ea348a4d2c7e78986bd747e5a3b7bc489de2791a13a2425f428ee8f1ef767e911e731e263235665fd98639f90bad1982f2914dd3785c66a06788be5f1554e420fa31ebe7b7115373d31463d06d9507edfd49403469f47e1d6ca3b9cfde5ebe985aedd82a57ca139c5c7ac5d31f1ed8ede4620e1fedb8a98d0be795b9358503d02249847f87528924792ef52fc34007fd83959720403aac642005d83a0f77f27cb13ae023d3db096d2901b3147d2985e6d5dc95cdc12152ea1f5b080a4881922c02c4f8390e0229e750e75f1c15bc5731d24a92c18309292c09c2672a1cf4595c0314e0e025e50474209c7ba61176ff072b88b4edc6013cfcf8f8a0ccba65ac044a84fbcc2c591a8bc2775781854401fa3c5f16506333431ef9e80e7ea6dff051499b4b4af9143509f272e6310613cef920b6d6cff8bed0088e83df5802aae01eb5fa27f4ea8576257e34f6ea98a1e90426e1c0ed8960c1a18767c4c332a3d0fd91197c2559f0e063106579e99670725af0000b4404ae34e0254e7aaae46b81fa855f455e70d454a2b1df8fa7a0f158bba1a28de424d53e772030760d06bbfc4e613ffce1b5a83f09f2e6d172ef6dfc37e4f6404666a3d5ce603c2a1f734ce41b130d2b5aa6384aaad07df261655835082bd5dc179265e64d234d777d4b5632a108d638bdeb030b7f22aefe5c6e4420f5e7c4d170f51af9a56a34d324cba2d74696a7a64efc302f65b046d89bab9915e5fd0c35bb26a55734ed0e6085c6aba732b71a8546f7307f114555e1ff70bbf6a81dba6c8462dd8ffcf80435ac1183b44fecaaab8fee77174ff294a195fcfedb6657de3276327575a98fb3a9c61aa118aa7b14ea0d3ec58af97797ac0b0dab46e09aa051696cb995516993c6a27fd3546fd1ea1ac3abd3af83b5a9089b2f058de476d4c854cb3a7f3f165fdd9722a7d02022234ff92dc0884a76bb8449c7ad7c10b6a2c53bb4143646b2140dda48c02351421254ceb5b8cd78ade3d1fc227e48605f52cb4aad52ccf77fe24b2bf11929db8228efd5d73dde361f1b2149c7bddc8f2466dae0ca5a16bfb082337b3e089882151a6a7c684b8e3d85cefe7de4220523c75d8adca13190f1f22659573190424e172a9d2013d831a6d2418bc7a4d0f0f60cd5c47d6fd90245f9e42f5257f26f2c90233c16645cfdc58ff49736605390add2bbe8e7ac1f70e0a5533c565994c1a0649a416df22750182c3d734abce07b9f1a953aec1717a04b17b6a23fe908597ebfa4e143315431dbb41046ffe0bcf8075677025bc480a719e220a8fae06711d5ea467cd2b6260d66eef74c7fe1a4de028d7461a79173d793fe97b1fa00d982cc0c62ef2ae8416297179198424da8b6eff437565e5e1d075507cbf0b41d1ea2d6b11eef09325d3</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 這裡需要密碼.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
       
     </div>
     
@@ -418,6 +417,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/secret/" rel="tag"># secret</a>
+          
+        </div>
+      
 
       
       
@@ -427,8 +432,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/OS-MM.html" rel="next" title="Memory management">
-                <i class="fa fa-chevron-left"></i> Memory management
+              <a href="/LC-377.html" rel="next" title="LC-377 Combination Sum IV">
+                <i class="fa fa-chevron-left"></i> LC-377 Combination Sum IV
               </a>
             
           </div>
@@ -437,8 +442,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/OS-process.html" rel="prev" title="Process">
-                Process <i class="fa fa-chevron-right"></i>
+              <a href="/LC-40.html" rel="prev" title="LC-40 Combination Sum II">
+                LC-40 Combination Sum II <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
